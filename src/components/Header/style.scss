@@ -55,7 +55,7 @@ header{
             @media (max-width: 991px){
                 .search{
                     position: absolute;
-                    bottom: -44px;
+                    top: 99%;
                     width: 100%;
                     left: 0;
                     .search{
@@ -70,7 +70,16 @@ header{
                     }
                 }
             }
-
+            @media (max-width: 991px){
+                .account{
+                    display: none;
+                }
+            }
+            @media (min-width: 992px){
+                .menu{
+                    display: none;
+                }
+            }
             //Account
             .account{
                 margin-right: 20px;

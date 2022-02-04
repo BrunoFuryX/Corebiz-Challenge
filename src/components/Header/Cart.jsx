@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 
 export default function Cart(){
 
-    const [quantity, setQuantity] = useState(localStorage.getItem('cartQty') || 0)
+    const [quantity, setQuantity] = useState(localStorage.getItem('cartQuantity') || 0)
     
     function quantityListener(){
-        const cartQty = localStorage.getItem('cartQty')
-        setQuantity(cartQty)
+        const cartQuantity = localStorage.getItem('cartQuantity')
+        setQuantity(cartQuantity)
     }
     
     useEffect(() => {

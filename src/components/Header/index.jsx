@@ -9,14 +9,10 @@ export default function Header(){
     return(
         <header id="header" className="header">
             <div className="header__container">
-                {window.innerWidth <= 991 &&(
-                    <ButtonMenu />
-                )}
+                <ButtonMenu />
                 <Logo />
                 <Search />
-                {window.innerWidth >= 991 && (
-                    <MyAccount />
-                )}
+                <MyAccount />
                 <Cart />
             </div>
         </header>

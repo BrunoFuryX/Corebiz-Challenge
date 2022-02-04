@@ -1,7 +1,12 @@
+import React, { useEffect, useState, useLayoutEffect } from 'react'
+
 import Slider from "react-slick";
 import './style.scss'
 
 export default function Banner(props){
+
+    const [mobile, setMobile] = useState(0)
+
     const settings = {
         dots: true,
         infinite: true,
@@ -11,41 +16,31 @@ export default function Banner(props){
         arrows: false
     }
 
+    useLayoutEffect(() => {
+        function updateSize() {
+            setMobile(window.innerWidth >= 991 ? 0 : 1);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+
     return(
         <section className="fullbanner">
-        {props.screen === 'desktop' && (
             <Slider {...settings}>
                 <div>
-                    <img src="/images/fullbannerDesktop.png" alt="Banner1"/>
+                    <img src={ mobile ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner1"/>
                 </div>
                 <div>
-                    <img src="/images/fullbannerDesktop.png" alt="Banner2"/>
+                    <img src={ mobile ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner2"/>
                 </div>
                 <div>
-                    <img src="/images/fullbannerDesktop.png" alt="Banner3"/>
+                    <img src={props.screen === 'mobile' ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner3"/>
                 </div>
                 <div>
-                    <img src="/images/fullbannerDesktop.png" alt="Banner4"/>
+                    <img src={props.screen === 'mobile' ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner4"/>
                 </div>
             </Slider>
-        )}
-
-        {props.screen === 'mobile' && (
-            <Slider {...settings}>
-                <div>
-                    <img src="/images/fullbannerMobile.png" alt="Banner1"/>
-                </div>
-                <div>
-                    <img src="/images/fullbannerMobile.png" alt="Banner2"/>
-                </div>
-                <div>
-                    <img src="/images/fullbannerMobile.png" alt="Banner3"/>
-                </div>
-                <div>
-                    <img src="/images/fullbannerMobile.png" alt="Banner4"/>
-                </div>
-        </Slider>
-        )}  
         </section>
     );
 }
