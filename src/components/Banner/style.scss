@@ -1,0 +1,47 @@
+.fullbanner{
+    .slick-slider{
+        .slick-slide{
+            img{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.slick-slider{
+    .slick-dots{
+        bottom: 37px;
+        li, button, button:before{
+            width: 10px;
+            height: 10px;
+        }
+        li{
+            margin: 0 6px;
+            button{
+                &:before{
+                    font-size: 0;
+                    opacity: 1;
+                    border-radius: 20px;
+                    background: #BDBDBD;
+                }
+            }
+            &.slick-active{
+                button:before{
+                    background: #F8475F;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .fullbanner{
+        margin-top: 50px;
+        .slick-slider{
+            .slick-dots{
+                bottom: 20px;
+            }
+        }
+    }
+}
