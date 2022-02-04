@@ -35,10 +35,10 @@ export default function Banner(props){
                     <img src={ mobile ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner2"/>
                 </div>
                 <div>
-                    <img src={props.screen === 'mobile' ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner3"/>
+                    <img src={ mobile ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner3"/>
                 </div>
                 <div>
-                    <img src={props.screen === 'mobile' ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner4"/>
+                    <img src={ mobile ? "/images/fullbannerMobile.png" : "/images/fullbannerDesktop.png" } alt="Banner4"/>
                 </div>
             </Slider>
         </section>
