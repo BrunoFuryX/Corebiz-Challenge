@@ -2,7 +2,7 @@
 
 Versão necessária do NodeJs 14
 
-## Available Scripts
+## Scripts necessarios para rodar o projeto
 
 No diretório do projeto, você pode rodar:
 ### `npm i`
