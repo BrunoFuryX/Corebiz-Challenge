@@ -14,7 +14,7 @@ export default function Home(){
             <Header />
             <Banner screen={window.innerWidth >= 991 ? 'desktop' : 'mobile' }/>
             <div className="main__container">
-                <Showcase />
+                <Showcase title={ "Mais vendidos" } />
             </div>
             <NewsLetter />
             <Footer />
