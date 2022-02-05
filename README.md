@@ -5,6 +5,7 @@ Versão necessária do NodeJs 14
 ## Site hospedado em ambiente vercel
 
 https://corebizchallenge-brunofuryx.vercel.app/
+
 https://corebizchallenge.vercel.app/
 
 ## Scripts necessarios para rodar o projeto
